@@ -3,7 +3,10 @@
 Welcome to **ContractApp**! This is a fully local, Retrieval-Augmented Generation (RAG) chatbot designed to act as an Insurance Training Assistant. 
 
 Instead of relying on expensive cloud APIs, this project is built to run **100% free and locally** on your machine. It pulls a training dataset directly from Hugging Face, processes it into a local vector database, and uses Ollama to answer questions—all through a clean Streamlit web interface.
-![App Screenshot](contractapp ss.png)
+## Demo Screenshot
+
+![App Screenshot](assets/contractapp-ss.png)
+
 
 ## ✨ Features
 * **100% Local & Free:** No OpenAI or paid API keys required.
