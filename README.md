@@ -36,9 +36,11 @@ UI Rendering
 
 ##  Demo — V2 (Contract Intelligence System)
 
-[insert new system screenshot here]
+* **INRO PAGE**
 ![App Screenshot](assets/intro_page.png)
+* **POST RUNNING ANALYSIS OF THE DATASET**
 ![App Screenshot](assets/data_analysis.png)
+* **BACKEND FASTAPI IN ACTION**
 ![App Screenshot](assets/Fastapi_running.png)
 
 ## Tech Stack
