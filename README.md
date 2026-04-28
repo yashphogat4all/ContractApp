@@ -1,37 +1,127 @@
-# 🛡️ Insurance Assistant (Local AI & HuggingFace)
+# 🛡️ AI Contract Intelligence System (RAG + Local LLM)
 
-Welcome to **ContractApp**! This is a fully local, Retrieval-Augmented Generation (RAG) chatbot designed to act as an Insurance Training Assistant. 
+AI-powered contract auditing system that transforms unstructured legal documents into structured, decision-ready insights.
 
-Instead of relying on expensive cloud APIs, this project is built to run **100% free and locally** on your machine. It pulls a training dataset directly from Hugging Face, processes it into a local vector database, and uses Ollama to answer questions—all through a clean Streamlit web interface.
-## Demo Screenshot
+This project evolved from a Retrieval-Augmented Generation (RAG) chatbot into a full contract intelligence pipeline capable of clause extraction, risk classification, and plain-English explanations.
+
+##  What it does
+* **Upload employment contracts (PDF/DOCX)**
+* **Extract key clauses (compensation, probation, termination, etc.)**
+* **Assign risk levels (low / medium / high)**
+* **Generate plain-English explanations**
+* **Output structured JSON for audit workflows**
+* **Enable decision support instead of raw AI responses**
+
+##  System Architecture
+ ```bash
+Frontend (Streamlit / Next.js)
+        ↓
+FastAPI Backend
+        ↓
+Document Parsing (PDF/DOCX)
+        ↓
+RAG + LLM Pipeline
+        ↓
+Clause Extraction + Risk Classification
+        ↓
+Structured Output (JSON)
+        ↓
+UI Rendering
+  ```
+
+##  Demo — V1 (RAG Chatbot)
 
 ![App Screenshot](assets/contractapp-ss.png)
 
 
-## ✨ Features
-* **100% Local & Free:** No OpenAI or paid API keys required.
-* **Direct Dataset Loading:** Bypasses complex web scraping by directly reading `.parquet` files from Hugging Face into a Pandas DataFrame.
-* **Local Embeddings:** Uses Hugging Face's `all-MiniLM-L6-v2` via CPU to create text embeddings.
-* **Local LLM:** Powered by `Llama 3.2` (via Ollama) for private, offline inference.
-* **Interactive UI:** A conversational chat interface built with Streamlit.
+##  Demo — V2 (Contract Intelligence System)
 
-## 🛠️ Tech Stack
-* **Frontend:** Streamlit
-* **Data Processing:** Pandas, PyArrow
-* **Orchestration:** LangChain, Langchain-Classic
-* **Embeddings:** HuggingFace (`sentence-transformers`)
-* **Vector Store:** FAISS (CPU)
-* **Local AI Engine:** Ollama
+[insert new system screenshot here]
 
-## 🚀 Getting Started
+## Tech Stack
+* Python
+* FastAPI
+* LangChain
+* FAISS (vector search)
+* Hugging Face (embeddings)
+* Ollama (Llama 3.2 local inference)
+* Pandas
+* Streamlit / Next.js
 
-### Prerequisites
-1. **Python 3.8+** installed on your machine.
-2. **Ollama** installed ([Download here](https://ollama.com/)).
+##  Key Highlights
+* Built a full-stack AI system from ingestion to structured decision output
+* Designed structured outputs instead of raw LLM responses
+* Focused on decision-support workflows, not just chatbot answers
+* Runs locally with privacy-first architecture (no external API dependency)
+* Demonstrates system-level thinking across AI, backend, and product layers
 
-### Installation
+## System Evolution
 
-1. **Clone the repository (or create your project folder):**
-   ```bash
-   git clone [https://github.com/YOUR-USERNAME/contractapp.git](https://github.com/YOUR-USERNAME/contractapp.git)
-   cd contractapp
+### V1 — RAG Assistant
+
+* Semantic search + Q&A over insurance dataset
+* Local embeddings + local LLM
+* Chat-based interaction
+
+### V2 — Contract Intelligence System
+
+* Clause extraction pipeline
+* Risk classification (low / medium / high)
+* Plain-English explanation layer
+* Structured JSON outputs for audit workflows
+* Transition from chatbot → decision support system
+
+##  End-to-End Workflow
+ ```bash
+Document Upload
+        ↓
+Parsing (PDF / DOCX)
+        ↓
+Chunking + Embeddings
+        ↓
+Vector Search (FAISS)
+        ↓
+LLM Processing (Ollama)
+        ↓
+Clause Extraction
+        ↓
+Risk Classification
+        ↓
+Structured Output
+        ↓
+UI Rendering
+ ```
+
+## Backend & System Design
+
+* **FastAPI-based backend for orchestration and processing**
+* **Modular separation of:**
+* Frontend (UI interaction)
+* Backend (processing & APIs)
+* AI pipeline (retrieval + extraction + generation)
+
+## Flow:
+ ```bash
+Frontend → FastAPI Backend → AI Pipeline → Structured JSON → UI
+ ```
+## Getting Started
+**Prerequisites**
+* Python 3.8+
+* Node.js (for frontend)
+* Ollama installed ([Download here](https://ollama.com/)).
+
+## Setup and Running the Project
+
+**Backend and frontend are separated:**
+
+* FastAPI handles processing and APIs
+* Next.js handles UI rendering
+
+Run locally using a standard Python + Node.js setup.
+
+## Positioning
+
+This project demonstrates how LLM-based systems can move beyond chat interfaces into structured, decision-support applications.
+
+It focuses on transforming complex legal text into interpretable, actionable insights for real-world use cases.
+## 
