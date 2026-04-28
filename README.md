@@ -37,6 +37,9 @@ UI Rendering
 ##  Demo — V2 (Contract Intelligence System)
 
 [insert new system screenshot here]
+![App Screenshot](assets/intro_page.png)
+![App Screenshot](assets/data_analysis.png)
+![App Screenshot](assets/Fastapi_running.png)
 
 ## Tech Stack
 * Python
